@@ -1,0 +1,46 @@
+# WordPress Docker Setup
+
+Este repositório contém um Dockerfile e arquivos de configuração para criar um ambiente de desenvolvimento local do WordPress usando Docker.
+
+## Requisitos
+
+Certifique-se de ter o Docker e o Docker Compose instalados no seu sistema.
+
+## Como Usar
+
+1. Clone este repositório:
+
+git clone https://github.com/jhonatan-github/docker-image-wordpress.git
+
+2. Navegue até o diretório clonado:
+
+3. Personalize as configurações:
+
+Abra o arquivo wp-config.php e ajuste as configurações do banco de dados conforme necessário.
+Adicione os arquivos do WordPress (temas, plugins etc.) no diretório.
+
+4. Construa e execute o contêiner:
+
+# Construir a imagem
+docker build -t nome-da-imagem .
+
+# Executar o contêiner
+docker run -d -p 8080:8080 -h localhost nome-da-imagem
+
+Isso iniciará o contêiner do WordPress.
+
+1. Acesse o site WordPress:
+Abra um navegador e vá para http://localhost:8080 para acessar o seu site WordPress.
+
+1. Para parar e remover os contêineres:
+
+# Pare o container
+docker stop id do container
+
+# Remova a imagem
+docker image rm -f nome-da-imagem .
+
+
+# Notas
+Este ambiente é destinado principalmente para desenvolvimento local. Certifique-se de seguir as melhores práticas de segurança ao implantar em um ambiente de produção.
+Certifique-se de revisar e personalizar as configurações de acordo com as necessidades do seu projeto.
